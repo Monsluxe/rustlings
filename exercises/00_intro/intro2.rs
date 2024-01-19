@@ -10,3 +10,7 @@
 fn main() {
     printline!("Hello there!")
 }
+
+//Compiler hint tells us that  "printline macro was not defined in the current scope, but there is a similar macro named println is available".
+
+//So lets try to use use println! then ! 
