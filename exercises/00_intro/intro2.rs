@@ -5,11 +5,13 @@
 // Execute `rustlings hint intro2` or use the `hint` watch subcommand for a
 // hint.
 
-// I AM NOT DONE
 
 fn main() {
-    printline!("Hello there!")
+    println!("Hello there!")
 }
+
+
+//WRITEUP : 
 
 //Compiler hint tells us that  "printline macro was not defined in the current scope, but there is a similar macro named println is available".
 
