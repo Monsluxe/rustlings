@@ -13,10 +13,15 @@
 //
 // No hints this time ;)
 
-// I AM NOT DONE
 
 // Put your function here!
-// fn calculate_price_of_apples {
+fn calculate_price_of_apples(quantity: i32) -> i32 {
+    if quantity > 40 {
+        quantity // Price is 1 rustbuck per apple for orders over 40 apples
+    } else {
+        quantity * 2 // Price is 2 rustbucks per apple for orders of 40 or fewer apples
+    }
+}
 
 // Don't modify this function!
 #[test]
