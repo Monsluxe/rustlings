@@ -7,7 +7,6 @@
 // Execute `rustlings hint traits5` or use the `hint` watch subcommand for a
 // hint.
 
-// I AM NOT DONE
 
 pub trait SomeTrait {
     fn some_function(&self) -> bool {
@@ -30,7 +29,7 @@ impl SomeTrait for OtherStruct {}
 impl OtherTrait for OtherStruct {}
 
 // YOU MAY ONLY CHANGE THE NEXT LINE
-fn some_func(item: ??) -> bool {
+fn some_func(item: impl SomeTrait + OtherTrait) -> bool {
     item.some_function() && item.other_function()
 }
 
@@ -38,3 +37,7 @@ fn main() {
     some_func(SomeStruct {});
     some_func(OtherStruct {});
 }
+
+//The function some_func is supposed to take an argument of a type that implements both SomeTrait and OtherTrait
+//Lets fill the ??? to implement both someTrait and OtherTrait into the item argument. 
+//We then call some_func for someStruct and OtherStruct which are the only types that implement traits.
